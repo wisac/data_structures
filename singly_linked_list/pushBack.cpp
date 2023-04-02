@@ -2,8 +2,8 @@
 
 /**
  * pushBack - Insert a new node to the end of the list
- * @newNode: Node to be inserted
- * @newData: Data to be inserted
+ * @newNode: Node to be inserted when node is given
+ * @newData: Data to be inserted when a data (int) is given
  * 
  */
 
