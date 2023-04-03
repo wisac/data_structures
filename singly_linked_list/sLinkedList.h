@@ -41,6 +41,9 @@ public:
     void pushAfter(Node *previousNode, const int newData);
     
     void popFirst();
+    void popLast();
+    void pop(Node *givenNode);
+    void pop(int givenData);
 
     void printList();
     
