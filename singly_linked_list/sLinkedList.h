@@ -44,6 +44,7 @@ public:
     void pushFront(const int newData);
     void pushAfter(Node *previousNode, Node *newNode);
     void pushAfter(Node *previousNode, const int newData);
+    void pushAfter(const int dataBefore, const int givenData);
     
     
     void popFirst();
@@ -55,7 +56,8 @@ public:
     void printList();
     unsigned long int getLength();
 
-    int *find(int data);
+    int *find(const int data);
+    int findIndex(const int data);
 
     
 };
