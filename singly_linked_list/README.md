@@ -59,7 +59,8 @@ int main(void)
 Output:
 ```[10, 25] ```
 
-<br><br>
+<br>
+<br>
 
 *To insert at the beginning of the list:*
 Call ```pushFront()``` method and pass in the data to be inserted. 
@@ -260,3 +261,5 @@ References:
 Introduction to Singly Linked List - GeeksforGeeks. (n.d.). GeeksforGeeks. https://www.geeksforgeeks.org/data-structures/linked-list/singly-linked-list/
 
 What is a singly linked list? (n.d.). Educative: Interactive Courses for Software Developers. https://www.educative.io/answers/what-is-a-singly-linked-list
+
+Types of Linked List and Operation on Linked List. (n.d.). Types of Linked List and Operation on Linked List. https://afteracademy.com/blog/types-of-linked-list-and-operation-on-linked-list
