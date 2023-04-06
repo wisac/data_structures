@@ -299,6 +299,7 @@ Output:
 *To update data in the list*
 Call ```find()``` method and pass in the data to find
 Derefence the returned pointer and update the value pointed to
+<br>
 
 *Time complexity: O(n)*
 ```#include "sLinkedList.h"
@@ -323,9 +324,11 @@ int main(void)
 }
 ```
 Output:
-```[11, 17, 19]
-   [11, 55,19]
 ```
+[11, 17, 19]
+[11, 55,19]
+```
+
 
 
 
