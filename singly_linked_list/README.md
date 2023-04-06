@@ -12,6 +12,19 @@
 
 
 
+**Basic Operations on Singly Linked List**
+<ol>
+<li><em>Transversal</em>: To traverse all the nodes one after another.</li>
+<li><em>Insertion: To add a node at the given position.</em></li>
+<li><em>Deletion: To delete a node.</em></li>
+<li><em>Sorting: To arrange nodes in a linked list in a specific order.</em></li>
+<li><em>Updating: To update a node</em></li>
+<li><em>Searching: To search an element(s) by value.</em></li>
+<li><em>Merging: To merge two linked lists into one.</em></li>
+</ol>
+
+
+
 
 
 References:
