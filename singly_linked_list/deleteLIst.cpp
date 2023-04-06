@@ -1,6 +1,9 @@
 #include "sLinkedList.h"
 #include <iostream>
-
+/**
+ * deleteList - Removes all elements from the list making it empty
+ * Displays an error message if list is already empty
+*/
 void sLinkedList::deleteList()
 {
     if (head == nullptr)
