@@ -56,6 +56,9 @@ int main(void)
     return 0;
 }
 ```
+Output:
+```[10, 25] ```
+
 <br>
 
 *To insert at the beginning of the list:*
@@ -75,9 +78,14 @@ int main(void)
 
     Ages.pushFront(2); //Add 2 to beginning of list
 
+    Ages.printList();
+
     return 0;
 }
 ```
+Output:
+```[2, 10, 25] ```
+
 
 *To insert after a given node or data*
 Call ```pushAfter()``` method and pass in the previous node or data and the new data to be inserted. 
@@ -94,15 +102,150 @@ int main(void)
 
     Ages.pushFront(2); //Add 2 to beginning of list
 
-    Ages.pushAfter(25,9) //Inserts 9 after 25 in the list
+    Ages.pushAfter(10,9) //Inserts 9 after 10 in the list
+
+    Ages.printList(); //Print items in list
 
     return 0;
 }
 ```
+Output:
+```[2, 10, 9, 25] ```
+<br>
+<br>
 
+***2. Deletion***
+*To remove a node from the end of the list*
+Call ```popBack()``` method 
+<br>
 
+*Time complexity: O(n)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+    Ages.pushBack(11); //Add 11 to end of list
+    Ages.pushBack(17); //Add 17 to end of list
+    Ages.pushBack(19); //Add 19 to end of list
+    Ages.printList();
 
+    Ages.popBack(); //Removes 19 from end of list
+    Ages.printList();
 
+    Ages.popBack(); //Removes 17 from end of list
+    Ages.printList();
+
+   
+
+    return 0;
+}
+```
+Output:
+```[11, 17, 19]
+   [11, 17]
+   [11]
+ ```
+
+<br>
+
+*To remove a node from the beginning of the list*
+Call ```popFront()``` method 
+<br>
+
+*Time complexity: O(1)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+    Ages.pushBack(11); //Add 11 to end of list
+    Ages.pushBack(17); //Add 17 to end of list
+    Ages.pushBack(19); //Add 19 to end of list
+    Ages.printList();
+
+    Ages.popFront(); //Removes 11 from end of list
+    Ages.printList();
+
+    Ages.popFront(); //Removes 17 from end of list
+    Ages.printList();
+
+   
+
+    return 0;
+}
+```
+Output:
+```[11, 17, 19]
+   [17, 19]
+   [19]
+
+ ```
+
+<br>
+
+*To remove a node anywhere in the list*
+Call ```pop()``` method and pass in the node or data to be removed
+<br>
+
+*Time complexity: O(n)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+    Ages.pushBack(11); //Add 11 to end of list
+    Ages.pushBack(17); //Add 17 to end of list
+    Ages.pushBack(19); //Add 19 to end of list
+    Ages.pushFront(22) //Add 22 to beginning of list
+    Ages.printList();
+
+    Ages.pop(17); //Removes 17 from end of list
+    Ages.printList();
+
+    Ages.pop(19); //Removes 19 from end of list
+    Ages.printList();
+
+   
+
+    return 0;
+}
+```
+Output:
+```[22, 11, 17, 19]
+   [22, 11, 19]
+   [22,11]
+
+ ```
+<br>
+
+*To remove all nodes from in the list(free the list)*
+Call ```deleteList()``` method on the list
+<br>
+
+*Time complexity: O(n)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+    Ages.pushBack(11); //Add 11 to end of list
+    Ages.pushBack(17); //Add 17 to end of list
+    Ages.pushBack(19); //Add 19 to end of list
+    Ages.pushFront(22) //Add 22 to beginning of list
+    Ages.printList();
+
+    Ages.deleteList(); //Removes all elements from the list
+    Ages.printList();
+   
+
+    return 0;
+}
+```
+Output:
+```[22, 11, 17, 19]
+   []
+ ```
 
 
 
