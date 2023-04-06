@@ -25,6 +25,9 @@
 <br>
 <br>
 
+***USAGE***
+*Step 1: Include the header file #sLinkedList.h*
+
 ***0. To create a LinkedList:***
 ```#include "sLinkedList.h"
 int main(void)
@@ -35,17 +38,63 @@ int main(void)
 }
 ```
 ***1. Insertion***
-*To insert at the beginning of the list:*
-Call pushFront() method and pass in the data to be inserted. 
 
-*NB: pushFront() does not work on empty list*
+*To insert at the end of the list:*
+Call ```pushBack()``` method and pass in the data to be inserted. 
+<br>
 
+*Time complexity: O(1)*
 ```#include "sLinkedList.h"
 int main(void)
 {
     sLinkedList Ages;
 
+    Ages.pushBack(10); //Add 10 to list
+    Ages.pushBack(25); //Add 25 to list
     
+
+    return 0;
+}
+```
+<br>
+
+*To insert at the beginning of the list:*
+Call ```pushFront()``` method and pass in the data to be inserted. 
+
+*NB: ```pushFront()``` does not work on empty list*
+<br>
+
+*Time complexity: O(n)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+    Ages.pushBack(10); //Add 10 to end of list
+    Ages.pushBack(25); //Add 25 to end of list
+
+    Ages.pushFront(2); //Add 2 to beginning of list
+
+    return 0;
+}
+```
+
+*To insert after a given node or data*
+Call ```pushAfter()``` method and pass in the previous node or data and the new data to be inserted. 
+<br>
+
+*Time complexity: O(n)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+    Ages.pushBack(10); //Add 10 to end of list
+    Ages.pushBack(25); //Add 25 to end of list
+
+    Ages.pushFront(2); //Add 2 to beginning of list
+
+    Ages.pushAfter(25,9) //Inserts 9 after 25 in the list
 
     return 0;
 }
