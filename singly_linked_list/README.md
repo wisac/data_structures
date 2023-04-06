@@ -59,7 +59,7 @@ int main(void)
 Output:
 ```[10, 25] ```
 
-<br>
+<br><br>
 
 *To insert at the beginning of the list:*
 Call ```pushFront()``` method and pass in the data to be inserted. 
@@ -85,7 +85,7 @@ int main(void)
 ```
 Output:
 ```[2, 10, 25] ```
-
+<br><br>
 
 *To insert after a given node or data*
 Call ```pushAfter()``` method and pass in the previous node or data and the new data to be inserted. 
@@ -111,6 +111,8 @@ int main(void)
 ```
 Output:
 ```[2, 10, 9, 25] ```
+<br>
+<br>
 <br>
 <br>
 
@@ -148,6 +150,7 @@ Output:
  ```
 
 <br>
+<br>
 
 *To remove a node from the beginning of the list*
 Call ```popFront()``` method 
@@ -183,10 +186,12 @@ Output:
  ```
 
 <br>
+<br>
 
 *To remove a node anywhere in the list*
 Call ```pop()``` method and pass in the node or data to be removed
 <br>
+
 
 *Time complexity: O(n)*
 ```#include "sLinkedList.h"
@@ -217,6 +222,7 @@ Output:
    [22,11]
 
  ```
+<br>
 <br>
 
 *To remove all nodes from in the list(free the list)*
