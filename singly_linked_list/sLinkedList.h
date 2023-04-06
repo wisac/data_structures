@@ -15,6 +15,9 @@
  * @deleteList - Frees the list by removing all elements
  * @getLength - Calculates the size of the list
  *             Return: size of list (size_t)
+ * @find - Searches the entire list for a given element.
+ *          Return the pointer to the data if it is found;
+ *          Otherwise: Return null
  * 
  * @newNode: Node to be inserted
  * @newData: Data to be inserted
@@ -51,6 +54,8 @@ public:
 
     void printList();
     unsigned long int getLength();
+
+    int *find(int data);
 
     
 };
