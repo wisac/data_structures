@@ -28,7 +28,6 @@ class sLinkedList
 {
 private:
     Node *head;
-    Node *tail;
     int length;
 
 public:
@@ -44,8 +43,10 @@ public:
     void popLast();
     void pop(Node *givenNode);
     void pop(int givenData);
+    void deleteList();
 
     void printList();
+
     
 };
 

@@ -10,7 +10,7 @@
 void sLinkedList::pushBack(Node *newNode)
 {
     // tail = head so that we can use tail to tranverse the list without moving head
-    tail = head;
+   
 
     newNode->next = nullptr;
 
@@ -21,6 +21,7 @@ void sLinkedList::pushBack(Node *newNode)
         return;
     }
 
+    Node *tail = head;
     while (tail->next != nullptr)
     {
         tail = tail->next;
@@ -38,9 +39,6 @@ void sLinkedList::pushBack(const int newData)
 
     Node *newNode = new Node();
 
-    // tail = head so that we can use tail to tranverse the list without moving head
-    tail = head;
-
     newNode->data = newData;
 
     newNode->next = nullptr;
@@ -52,6 +50,8 @@ void sLinkedList::pushBack(const int newData)
         return;
     }
 
+    // tail = head so that we can use tail to tranverse the list without moving head
+    Node *tail = head;
     while (tail->next != nullptr)
     {
         tail = tail->next;
