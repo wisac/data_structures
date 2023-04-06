@@ -17,9 +17,10 @@
 <li><b>Transversal</b>: To traverse all the nodes one after another.</li>
 <li><b>Insertion</b>: To add a node at the given position.</li>
 <li><b>Deletion</b>: To delete a node.</li>
+<li><b>Searching</b>: To search an element(s) by value.</li>
 <li><b>Sorting</b>: To arrange nodes in a linked list in a specific order.</b></li>
 <li><b>Updating</b>: To update a node</li>
-<li><b>Searching</b>: To search an element(s) by value.</li>
+
 <li><b>Merging</b>: To merge two linked lists into one.</li>
 </ol>
 <br>
@@ -253,6 +254,83 @@ Output:
 ```[22, 11, 17, 19]
    []
  ```
+
+<br>
+<br>
+<br>
+
+***3. Searching***
+*To find an data in the list*
+Call ```find()``` method and pass in the data to find
+Returns pointer to the data which you can dereference to get the data
+
+*Time complexity: O(n)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+    Ages.pushBack(11); //Add 11 to end of list
+    Ages.pushBack(17); //Add 17 to end of list
+    Ages.pushBack(19); //Add 19 to end of list
+    Ages.pushFront(22) //Add 22 to beginning of list
+    Ages.printList();
+
+    int *ptr = Ages.find(22);//assinging the memory location of 22 to ptr
+    
+
+   std::cout << prt << std::endl; //printing memory loc of 22
+   std::cout << *ptr <<std::endl; //dereferencing ptr
+
+
+    return 0;
+}
+```
+Output:
+```[22, 11, 17, 19]
+   0x713ae2321b0
+   22
+ ```
+ <br>
+ <br>
+ <br>
+
+***3. Updating***
+*To update data in the list*
+Call ```find()``` method and pass in the data to find
+Derefence the returned pointer and update the value pointed to
+
+*Time complexity: O(n)*
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+    
+   
+    Ages.pushBack(17); //Add 17 to end of list
+    Ages.pushBack(19); //Add 19 to end of list
+    Ages.pushFront(22) //Add 22 to beginning of list
+    Ages.printList();
+
+    int *ptr = Ages.find(17);//assinging the memory location of 17 to ptr
+    
+    *ptr = 55; //Derefencing and updating data pointed to by ptr with 14
+   
+    Ages.printList;
+
+
+    return 0;
+}
+```
+Output:
+```[11, 17, 19]
+   [11, 55,19]
+ ```
+
+
+
+
+
 
 
 
