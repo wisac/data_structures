@@ -18,6 +18,8 @@ void sLinkedList::popFirst()
         Node *temp = head->next;
         delete(head) ;
         head = temp; 
+        
+        length--;
     }
     catch (const int emptyList)
     {

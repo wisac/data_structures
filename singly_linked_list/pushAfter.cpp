@@ -12,6 +12,7 @@ void sLinkedList::pushAfter(Node *previousNode, Node *newNode)
 {
     newNode->next = previousNode->next;
     previousNode->next = newNode;
+    length++;
 }
 
 void sLinkedList::pushAfter(Node *previousNode, const int newData)
@@ -21,4 +22,5 @@ void sLinkedList::pushAfter(Node *previousNode, const int newData)
 
     newNode->next = previousNode->next;
     previousNode->next = newNode;
+    length++;
 }

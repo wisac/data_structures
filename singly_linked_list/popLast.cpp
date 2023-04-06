@@ -23,6 +23,8 @@ void sLinkedList::popLast()
         second = first->next;
         first->next = nullptr;
         delete (second);
+
+        length--;
     }
 
     catch (int emptyList)

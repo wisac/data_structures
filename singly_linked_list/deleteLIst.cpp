@@ -20,4 +20,5 @@ void sLinkedList::deleteList()
         head = temp;
     }
     head = nullptr;
+    length = 0;
 }

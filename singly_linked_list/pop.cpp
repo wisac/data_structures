@@ -27,6 +27,7 @@ void sLinkedList::pop(Node *givenNode)
             head = head->next;
             if (toRemove->next != nullptr)
                 delete (toRemove);
+            length--;
             return;
         }
 
@@ -40,8 +41,10 @@ void sLinkedList::pop(Node *givenNode)
                 current->next = current->next->next;
                 if (toRemove->next != nullptr) // To avoid double call of free()
                     delete (toRemove);
+                length--;
                 return;
             }
+
             current = current->next;
         }
 
@@ -76,6 +79,7 @@ void sLinkedList::pop(int givenData)
             head = head->next;
             if (toRemove->next != nullptr)
                 delete (toRemove);
+            length--;
             return;
         }
 
@@ -88,9 +92,11 @@ void sLinkedList::pop(int givenData)
                 current->next = current->next->next;
                 if (toRemove->next != nullptr) // To avoid double call of free()
                     delete (toRemove);
+                length--;
                 return;
             }
             current = current->next;
+            
         }
 
         std::cout << "Element not found in list\n";

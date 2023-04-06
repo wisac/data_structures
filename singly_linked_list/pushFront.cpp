@@ -21,6 +21,7 @@ void sLinkedList::pushFront(const int newData)
         newNode->data = newData;
         newNode->next = head;
         head = newNode;
+        length++;
     }
 
     catch (int emptyList)
@@ -40,6 +41,7 @@ void sLinkedList::pushFront(Node *newNode)
 
         newNode->next = head;
         head = newNode;
+        length++;
     }
 
     catch (int emptyList)

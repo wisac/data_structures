@@ -18,6 +18,7 @@ void sLinkedList::pushBack(Node *newNode)
     if (head == nullptr)
     {
         head = newNode;
+        length++;
         return;
     }
 
@@ -28,6 +29,7 @@ void sLinkedList::pushBack(Node *newNode)
     }
 
     tail->next = newNode;
+    length++;
 }
 
 
@@ -47,6 +49,7 @@ void sLinkedList::pushBack(const int newData)
     if (head == nullptr)
     {
         head = newNode;
+        length++;
         return;
     }
 
@@ -58,4 +61,5 @@ void sLinkedList::pushBack(const int newData)
     }
 
     tail->next = newNode;
+    length++;
 }
