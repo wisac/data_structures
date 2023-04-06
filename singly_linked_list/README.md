@@ -22,6 +22,36 @@
 <li><b>Searching</b>: To search an element(s) by value.</li>
 <li><b>Merging</b>: To merge two linked lists into one.</li>
 </ol>
+<br>
+<br>
+
+***0. To create a LinkedList:***
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+
+    return 0;
+}
+```
+***1. Insertion***
+*To insert at the beginning of the list:*
+Call pushFront() method and pass in the data to be inserted. 
+
+*NB: pushFront() does not work on empty list*
+
+```#include "sLinkedList.h"
+int main(void)
+{
+    sLinkedList Ages;
+
+    
+
+    return 0;
+}
+```
+
+
 
 
 
