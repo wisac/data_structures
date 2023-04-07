@@ -4,9 +4,9 @@
  *          Return: The index of the element; Otherwise return -1
 */
 
-int sLinkedList::findIndex(int data)
+int sLinkedList::findIndex(const int data)
 {
-    int index = -1;
+    int index = 0;
     Node *temp = head;
 
     while (temp != nullptr)
@@ -19,5 +19,23 @@ int sLinkedList::findIndex(int data)
         index++;
 
     }
+    return -1;
+}
+
+int sLinkedList::findIndex(const Node *givenNode)
+{
+    int index = 0;
+    Node *temp = head;
+
+    while(temp != nullptr)
+    {
+        if (temp == givenNode)
+        {
+            return index;
+        }
+        temp = temp->next;
+        index++;
+    }
+
     return -1;
 }

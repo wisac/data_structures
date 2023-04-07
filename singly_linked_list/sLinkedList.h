@@ -57,7 +57,9 @@ public:
     unsigned long int getLength();
 
     int *find(const int data);
+    int *find(const Node *givenNode);
     int findIndex(const int data);
+    int findIndex(const Node *givenNode);
 
     
 };
