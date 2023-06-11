@@ -8,6 +8,7 @@
  * @length : Length of the list
  * 
  * @pushBack - Adds a new node to the end of the list
+ * @pushFront - Adds a new node to the beginning of the list
  * @newNode : Node to be inserted
  * @newData : Data to be inserted
  */
@@ -23,7 +24,14 @@ public:
     //insertion methods
     void pushBack(Node *newNode);
     void pushBack(const int newData);
-    
+    void pushFront(Node *newNode);
+    void pushFront(const int newData);
+    // void pushAfter(Node *previousNode, Node *newNode);
+    // void pushAfter(Node *previousNode, const int newData);
+    // void pushAfter(const int dataBefore, const int givenData);
+    //  void pushBefore(Node *previousNode, Node *newNode);
+    // void pushBefore(Node *previousNode, const int newData);
+
 };
 
 #endif
