@@ -41,6 +41,7 @@ void dLinkedList::pushBack(const int newData)
     }
 
     tail->next = newNode;
-    newNode->previous = tail;  
+    newNode->previous = tail;
+    tail = newNode;  
     length++; 
 }

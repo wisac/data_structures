@@ -23,6 +23,7 @@ public:
     //insertion methods
     void pushBack(Node *newNode);
     void pushBack(const int newData);
+    
 };
 
 #endif
