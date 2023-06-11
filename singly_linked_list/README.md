@@ -10,7 +10,7 @@
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220816144425/LLdrawio.png" alt="linked list image">
 
-
+<br>
 
 **Basic Operations on Singly Linked List**
 <ol>
