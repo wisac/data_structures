@@ -2,7 +2,7 @@
 #include <iostream>
 
 /**
- *pushFront - Insert new node at the beginning of the list
+ *pushFront - Inserts new node at the beginning of the list
  * @newNode: Node to be inserted
  * @newData: Data to be inserted
  */
@@ -43,7 +43,6 @@ void sLinkedList::pushFront(Node *newNode)
         head = newNode;
         length++;
     }
-
     catch (int emptyList)
     {
         std::cerr << "Error: cannot pushFront() in an empty list. Try pushBack() instead\n";
