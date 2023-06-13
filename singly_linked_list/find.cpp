@@ -43,7 +43,7 @@ int *sLinkedList::find(const Node *givenNode)
 
     Node *temp = head;
 
-    while(temp != nullptr)
+    while (temp != nullptr)
     {
         if (temp == givenNode)
         {
@@ -51,6 +51,6 @@ int *sLinkedList::find(const Node *givenNode)
         }
         temp = temp->next;
     }
-    
-    return nullptr;   
+
+    return nullptr;
 }
