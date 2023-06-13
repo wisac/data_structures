@@ -10,6 +10,9 @@
  * @pushBack - Inserts a new node at the end of the list
  * @pushFront - Insert a new node at the beginning of the list
  * @pushAfter - Inserts a new node after a given node
+ * @pop - Removes a node from the list
+ * @popLast - Removes the last node in the list
+ * @popFirst - Removes the first node from the list
  * @newNode : Node to be inserted
  * @newData : Data to be inserted
  * @previousNode : Given node after which new node would be inserted
@@ -30,8 +33,18 @@ public:
     void pushFront(const int newData);
     void pushAfter(Node *previousNode, Node *newNode);
     void pushAfter(Node *previousNode, const int newData);
-    void pushAfter(const int index, const int givenData);
+    // void pushAfter(const int index, const int givenData);
     void printLoc();
+    
+    //deletion methods
+    void popFirst();
+    void popLast();
+    void pop(Node *givenNode);
+    void pop(int givenData);
+    void deleteList();
+
+
+
     //  void pushBefore(Node *previousNode, Node *newNode);
     // void pushBefore(Node *previousNode, const int newData);
 
