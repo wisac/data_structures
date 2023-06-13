@@ -21,6 +21,7 @@ void dLinkedList::popLast()
         last->previous = nullptr;
         tail = beforeTail;
         delete (last);
+        length--;
     }
     catch (int emtpyList)
     {

@@ -9,7 +9,6 @@ void sLinkedList::popFirst()
 {
     try
     {
-
         if (head == nullptr)
         {
             throw -1;
