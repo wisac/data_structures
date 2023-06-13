@@ -11,6 +11,10 @@
  * @pushFront - Insert new node at the beginning of the list
  * @pushAfter - Inserts a new node after a given node
  * @pushBack - Insert a new node to the end of the list
+ * @pushAfter - Inserts a new node after a given node
+ * @pop - Removes a node from the list
+ * @popLast - Removes the last node in the list
+ * @popFirst - Removes the first node from the list
  * @deleteList - Frees the list by removing all elements
  * @getLength - Calculates the size of the list
  *             Return: size of list (size_t)
@@ -21,10 +25,6 @@
  * @newNode: Node to be inserted
  * @newData: Data to be inserted
  * @previousNode: Node after which new node will be inserted
- *
- *
- *
- *
  */
 
 class sLinkedList

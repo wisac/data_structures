@@ -64,6 +64,8 @@ void sLinkedList::pop(Node *givenNode)
 
 void sLinkedList::pop(int givenData)
 {
+    /*Description: It removes the first occurrence of the given data from the list. If there are multipy nodes with same data as given, it removes the first one closest to the head node*/
+    
     try
     {
         // When list is empty
