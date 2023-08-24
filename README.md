@@ -44,6 +44,9 @@ Refer to README in the ***doubly_linkedl_list*** folder
 Refer to README in the ***stack*** folder
 
 
+### Documentation
+Both Betty-style and Doxygen-style documentation have been used for the code implementations in this repository. Please refer to the comments within the source files for detailed documentation.
+
 
 ### Contributing
 Contributions to this project are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
