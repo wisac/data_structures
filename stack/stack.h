@@ -9,7 +9,6 @@
  * @brief A templated stack implementation.
  * @tparam dataType The type of data stored in the stack.
  */
-
 template<class dataType>
 class Stack {
 private:
@@ -116,7 +115,7 @@ public:
 
     /**
     * @brief Extends the size of the stack.
-    * @param new size of the stack after extension.
+    * @param newSize The size of the stack after extension.
     */
     void resize(size_t newSize) {
         if (newSize < _stack.size()) {
