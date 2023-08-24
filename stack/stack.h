@@ -3,54 +3,51 @@
 
 #include <vector>
 #include <iostream>
+#include <stdexcept>
 
 /**
- * class Stack - A generic stack data structure.
- * @top: The index of the top element.
- * @_size: The current size of the stack.
- * @_stack: The vector used to store the stack elements.
- * @emptyValue: The value representing an empty slot in the stack.
- * @dataType: The type of data stored in the stack
+ * @brief A templated stack implementation.
+ * @tparam dataType The type of data stored in the stack.
  */
 
 template<class dataType>
 class Stack {
 private:
-    int top; 
-    int _size;
-    std::vector<dataType> _stack;
-    dataType emptyValue;
+    int top; /**< Index of the top element. */
+    int _size; /**< Current size of the stack. */
+    std::vector<dataType> _stack; /**< The underlying container for the stack. */
+    dataType emptyValue; /**< Value indicating an empty slot in the stack. */
 
 public:
     /**
-     * Stack Constructor - Initializes a stack with a given size and empty value.
-     * @size: The maximum size of the stack.
-     * @emptyVal: The value representing an empty slot.
+     * @brief Constructor for the Stack class.
+     * @param size The maximum size of the stack.
+     * @param emptyVal The value representing an empty slot.
      */
     Stack(int size, dataType emptyVal) : top{ -1 }, _size{ 0 }, _stack(size, emptyVal),
         emptyValue{ emptyVal } {
     }
 
     /**
-     * isEmpty - Checks if the stack is empty.
-     * Return: True if the stack is empty, otherwise false.
+     * @brief Checks if the stack is empty.
+     * @return True if the stack is empty, false otherwise.
      */
     bool isEmpty() {
         return _size == 0;
     }
 
     /**
-     * isFull - Checks if the stack is full.
-     * Return: True if the stack is full, otherwise false.
+     * @brief Checks if the stack is full.
+     * @return True if the stack is full, false otherwise.
      */
     bool isFull() {
         return top == int(_stack.size() - 1);
     }
 
     /**
-     * push - Pushes data onto the stack.
-     * @data: The data to be pushed onto the stack.
-     * @throws: std::out_of_range if the stack is already full.
+     * @brief Pushes data onto the stack.
+     * @param data The data to be pushed onto the stack.
+     * @throw std::out_of_range if the stack is already full.
      */
     void push(dataType data) {
         if (!isFull()) {
@@ -62,8 +59,8 @@ public:
     }
 
     /**
-     * pop - Pops the top element from the stack.
-     * @throws: std::out_of_range if the stack is empty.
+     * @brief Pops the top element from the stack.
+     * @throw std::out_of_range if the stack is empty.
      */
     void pop() {
         if (!isEmpty()) {
@@ -75,7 +72,7 @@ public:
     }
 
     /**
-     * display - Displays the contents of the stack.
+     * @brief Displays the contents of the stack.
      */
     void display() {
         std::cout << "[";
@@ -90,12 +87,45 @@ public:
     }
 
     /**
-     * size - Gets the current size of the stack.
-     * Return: The size of the stack.
+     * @brief Gets the current size of the stack.
+     * @return The size of the stack.
      */
     size_t size() {
         return this->_size;
     }
+
+
+    /**
+     * @brief Gets the current element on top of the stack.
+     * @return The current element on top of stack.
+    */
+    dataType peek() {
+        if (!isEmpty()) return _stack.at(top);
+        throw std::out_of_range("Stack is empty");
+    }
+
+    /**
+     * @brief Removes all elements from the stack and initialize the stack with empty values
+    */
+    void clear() {
+        _stack.clear();
+        _stack.resize(_stack.capacity(), emptyValue);
+        _size = 0;
+        top = -1;
+    }
+
+    /**
+    * @brief Extends the size of the stack.
+    * @param new size of the stack after extension.
+    */
+    void resize(size_t newSize) {
+        if (newSize < _stack.size()) {
+            throw std::invalid_argument("New size cannot be less than current stack size.");
+        }
+        _stack.resize(newSize, emptyValue);
+    }
+
+
 };
 
 #endif
