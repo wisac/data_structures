@@ -45,8 +45,8 @@ Refer to README in the ***stack*** folder
 
 
 
-Contributing
+### Contributing
 Contributions to this project are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 
-License
+### License
 This project is licensed under the MIT License.
